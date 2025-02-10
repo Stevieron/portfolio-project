@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  height: 95vh;
+  max-width: 375px;
+  margin: 0 auto;
+  color: white;
+}
+
+section .nav-header {
+  display: flex;
+  background: #3c3a39;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+header a {
+  padding-left: 1.2em;
+}
+
+nav img {
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+.headline-main {
+  height: 85vh;
+  padding: 20% 2em 0;
+  background: #1c1a19;
+}
+
+.primary-text {
+  font-family: "Crete Round", serif;
+  font-weight: 400px;
+  font-size: 3em;
+  line-height: 64px;
+  color: #ff6b00;
+  padding-bottom: 0.2em;
+}
+
+.supporting-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700px;
+  color: #fff5e1;
+  padding-bottom: 0.5em;
+}
+
+.description {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-size: 0.9em;
+  font-weight: 100px;
+  line-height: 22px;
+  padding-bottom: 0.5em;
+}
+
+article .group-img {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  width: 13em;
+  height: 12.4em;
+}
