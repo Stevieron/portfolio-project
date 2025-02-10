@@ -32,7 +32,7 @@ nav img {
 
 .headline-main {
   height: 85vh;
-  padding: 20% 2em 0;
+  padding: 28% 2em 0;
   background: #1c1a19;
 }
 
@@ -40,7 +40,7 @@ nav img {
   font-family: "Crete Round", serif;
   font-weight: 400px;
   font-size: 3em;
-  line-height: 64px;
+  line-height: 55px;
   color: #ff6b00;
   padding-bottom: 0.2em;
 }
@@ -61,10 +61,10 @@ nav img {
   padding-bottom: 0.5em;
 }
 
-article .group-img {
+.group-img img {
   position: absolute;
-  top: 50%;
-  left: 54%;
-  width: 13em;
-  height: 12.4em;
+  top: 55%;
+  left: 55%;
+  width: 7.5em;
+  height: 17.4em;
 }
