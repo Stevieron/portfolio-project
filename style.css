@@ -14,7 +14,7 @@
   background-image: url('./media-files/Group-Image.png');
   background-attachment: absolute;
   background-position: 100% 115%;
-  background-size: 12% 55%;
+  background-size: auto 55%;
   background-repeat: no-repeat;
 }
 
@@ -25,28 +25,42 @@ section .nav-header {
   justify-content: space-between;
   padding: 1em 0;
   margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
 }
 
 header a {
-  padding-left: 7%;
+  padding-left: 8%;
 }
 
 nav img {
-  padding-right: 7em;
+  padding-right: 2em;
   cursor: pointer;
 }
 
+.gap {
+  height: 20vh;
+}
+
 .headline-main {
-  padding: 13% 7% 0 7%;
+  padding: 17% 10% 0 10%;
 }
 
 .primary-text {
   font-family: "Crete Round", serif;
   font-weight: 400px;
   font-size: 3em;
-  line-height: 55px;
+  line-height: 50px;
   color: #ff6b00;
   padding-bottom: 0.5em;
+}
+
+.primary-text strong {
+  display: block;
 }
 
 .supporting-text {
@@ -60,7 +74,6 @@ nav img {
 .description {
   font-family: "Poppins", "Roboto", sans-serif;
   font-size: 1em;
-  font-weight: 100px;
-  line-height: 30px;
+  line-height: 23px;
   padding-bottom: 1em;
 }
