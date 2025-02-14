@@ -7,33 +7,37 @@
 }
 
 .container {
-  width: 90%;
-  height: 95vh;
-  max-width: 375px;
-  margin: 0 auto;
+  height: 100vh;
+  max-width: 100%;
   color: white;
+  background: #1c1a19;
+  background-image: url('./media-files/Group-Image.png');
+  background-attachment: absolute;
+  background-position: 100% 115%;
+  background-size: 12% 55%;
+  background-repeat: no-repeat;
 }
 
 section .nav-header {
   display: flex;
+  align-items: center;
   background: #3c3a39;
   justify-content: space-between;
-  padding-top: 1em;
+  padding: 1em 0;
+  margin: 0;
 }
 
 header a {
-  padding-left: 1.2em;
+  padding-left: 7%;
 }
 
 nav img {
-  padding-right: 2em;
+  padding-right: 7em;
   cursor: pointer;
 }
 
 .headline-main {
-  height: 85vh;
-  padding: 28% 2em 0;
-  background: #1c1a19;
+  padding: 13% 7% 0 7%;
 }
 
 .primary-text {
@@ -42,7 +46,7 @@ nav img {
   font-size: 3em;
   line-height: 55px;
   color: #ff6b00;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.5em;
 }
 
 .supporting-text {
@@ -55,16 +59,8 @@ nav img {
 
 .description {
   font-family: "Poppins", "Roboto", sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 100px;
-  line-height: 22px;
-  padding-bottom: 0.5em;
-}
-
-.group-img img {
-  position: absolute;
-  top: 55%;
-  left: 55%;
-  width: 7.5em;
-  height: 17.4em;
+  line-height: 30px;
+  padding-bottom: 1em;
 }
