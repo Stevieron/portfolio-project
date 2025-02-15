@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-project",
+  "version": "1.0.0",
+  "description": "My Portfolio is an application that showcases my skills, projects, and experience as a developer. Built with modern web technologies, it highlights my journey and expertise in frontend development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "hint": "^7.1.13",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
