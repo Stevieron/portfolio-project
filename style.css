@@ -10,6 +10,7 @@ html {
   font-size: 16px;
 }
 
+/* Hero Section */
 .container {
   min-width: 375px;
   width: 100%;
@@ -90,6 +91,7 @@ header a {
 
 /* Work Section */
 .work-main {
+  min-width: 375px;
   max-width: 100%;
   padding: 0 10vw;
   color: black;
@@ -217,4 +219,62 @@ button:active {
 .frame li {
   background: #3c3a39;
   color: #ffff;
+}
+
+/* About Section */
+
+.container-about {
+  min-width: 375px;
+  width: 100%;
+  margin-top: 10%;
+  background-color: #1c1a19;
+  color: #ffff;
+  background-image: url('./media-files/About-Image.png');
+  background-repeat: no-repeat;
+  background-size: 50% 22%;
+  background-position: 100% 22%;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 4em 10vw;
+}
+
+.about-main button {
+  width: 50%;
+  margin-bottom: 24em;
+}
+
+.line {
+  height: 2px;
+  flex: 1;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 7em;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin: 2em 0;
+}
+
+.skill-title h2 {
+  font-family: 'InaiMathi', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.my-skills ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.my-skills li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  line-height: 42.7px;
 }
