@@ -118,6 +118,7 @@ header a {
 
 .sub {
   font-size: 1.8em;
+  color: #091e42;
 }
 
 .work-text {
@@ -262,13 +263,40 @@ button:active {
   margin: 2em 0;
 }
 
-.skill-title h2 {
-  font-family: 'InaiMathi', sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
+.skill-group {
+  position: relative;
 }
 
-.my-skills ul {
+.skill-title-one::before {
+  content: url('media-files/Shape-One.png');
+  position: absolute;
+  top: 0;
+  left: 9%;
+}
+
+.skill-title-two::before {
+  content: url('media-files/Shape-Two.png');
+  position: absolute;
+  top: -1.3%;
+  left: 7%;
+}
+
+.skill-title-three::before {
+  content: url('media-files/Shape-Three.png');
+  position: absolute;
+  top: -1%;
+  left: 26%;
+}
+
+.skill-group .header {
+  font-family: 'InaiMathi', sans-serif;
+  font-size: 2.1rem;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.my-skills > ul,
+menu {
   list-style-type: none;
   text-align: center;
 }
