@@ -40,18 +40,18 @@ section .nav-header {
 }
 
 header a {
-  padding-left: 7%;
+  padding-left: 3%;
 }
 
 .menu {
-  padding: 10vw;
+  padding: 10vw 4vw;
   cursor: pointer;
 }
 
 .headline-main {
   min-height: 590px;
   height: auto;
-  padding: 30vh 10% 7% 10%;
+  padding: 30vh 10% 7% 6%;
   color: white;
   background: #1c1a19;
   background-image: url('./media-files/Group-Image.png');
@@ -93,7 +93,7 @@ header a {
 .work-main {
   min-width: 375px;
   max-width: 100%;
-  padding: 0 10vw;
+  padding: 0 5vw;
   color: black;
 }
 
@@ -148,7 +148,7 @@ header a {
 button {
   width: 40%;
   background: #ff6b00;
-  padding: 0.7em;
+  padding: 1.5em 1em;
   outline: none;
   border: none;
   color: #fff5e1;
@@ -240,7 +240,7 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  padding: 4em 10vw;
+  padding: 4em 5vw;
 }
 
 .about-main button {
@@ -305,4 +305,82 @@ menu {
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   line-height: 42.7px;
+}
+
+/* Contact */
+.container-contact {
+  min-width: 375px;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.contact {
+  display: flex;
+  padding: 4em 5vw 1em 5vw;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.contact h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 44px;
+  color: #172b4d;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.contact input {
+  width: 100%;
+  height: 3em;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: 2px solid #dbd8d7;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #979493;
+}
+
+form textarea {
+  width: 100%;
+  height: 114px;
+  margin-top: 1em;
+  padding: 1em;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #3c3a39;
+  border: none;
+}
+
+form textarea:focus {
+  background: #fbf8f7;
+}
+
+.contact form button {
+  display: block;
+  margin: 1em auto;
+}
+
+footer {
+  margin-top: 3em;
+  border-top: 0.1em solid #dbd8d7;
+  padding-top: 1em;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.liner {
+  width: 30%;
+  border-radius: 7%;
+  margin: 0.5em auto;
+  height: 0.3em;
+  background: #0d151e;
 }
