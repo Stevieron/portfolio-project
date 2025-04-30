@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  min-width: 375px;
+  min-height: 755px;
+  width: 100%;
+  padding: 2em 5vw;
+  background-color: #3c3a39;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.toggle img {
+  height: 3em;
+  width: 3em;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-bottom: 50%;
+}
+
+ul li {
+  font-size: 2.1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.7em;
+  line-height: 44px;
+  border-bottom: 1px solid #6f6c6b;
+  color: #fff5e1;
+}
