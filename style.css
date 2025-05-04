@@ -11,6 +11,50 @@ html {
   background-color: #edebeb;
 }
 
+/* Typography */
+p {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+ul li {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.15rem;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 1.25rem;
+    line-height: 32px;
+  }
+
+  .primary-text {
+    font-size: 4.5rem;
+    line-height: 81.5px;
+  }
+
+  .supporting-text {
+    font-size: 2rem;
+    line-height: 44px;
+  }
+
+  .description {
+    font-size: 1.25rem;
+    line-height: 32px;
+  }
+
+  .work-text {
+    font-size: 1.25rem;
+    line-height: 28px;
+  }
+}
+
 /* MOBILE */
 
 /* Hero Section */
@@ -24,34 +68,30 @@ html {
   font-family: "Crete Round", serif;
 }
 
-p {
-  line-height: 24px;
-}
-
-section .nav-header {
-  display: flex;
-  align-items: center;
+.nav-header {
   background: #3c3a39;
-  justify-content: space-between;
-  padding: 1em 0;
-  margin: 0;
-
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
-
-  /* z-index: 1000; */
+  z-index: 1000;
 }
 
-header a {
-  padding-left: 4%;
+.nav-container {
   max-width: 1500px;
-  width: 100px;
+  margin: 0 auto;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
 }
 
 .menu {
+  display: block;
   padding: 10vw 4vw;
   cursor: pointer;
 }
@@ -60,11 +100,7 @@ header a {
   display: none;
 }
 
-.headline-main {
-  min-height: 590px;
-  height: auto;
-  padding: 30vh 10% 7% 6%;
-  color: white;
+.headline-wrapper {
   background: #1c1a19;
   background-image: url('./media-files/Group-Image.png');
   background-attachment: absolute;
@@ -73,10 +109,17 @@ header a {
   background-repeat: no-repeat;
 }
 
+.headline-main {
+  min-height: 590px;
+  height: auto;
+  padding: 30vh 10% 7% 6%;
+  color: white;
+}
+
 .primary-text {
   font-weight: 400px;
-  font-size: 2.7em;
-  line-height: 50px;
+  font-size: 3.5rem;
+  line-height: 64px;
   color: #ff6b00;
   padding-bottom: 0.5em;
 }
@@ -88,6 +131,7 @@ header a {
 .supporting-text {
   font-family: "Roboto", sans-serif;
   font-size: 1.4em;
+  line-height: 32px;
   font-weight: 700px;
   color: #fff5e1;
   padding-bottom: 0.3em;
@@ -95,16 +139,19 @@ header a {
 
 .description {
   font-family: "Poppins", "Roboto", sans-serif;
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 24px;
   padding-bottom: 1em;
   white-space: normal;
   max-width: 70vw;
 }
 
 /* Work Section */
-.work-main {
+.work.wrapper {
   background-color: #fff;
+}
+
+.work-main {
   min-width: 375px;
   max-width: 100%;
   padding: 0 5vw;
@@ -177,13 +224,14 @@ hr {
 }
 
 button {
-  width: 35%;
+  width: 40%;
+  height: 3em;
   background: #ff6b00;
-  padding: 0.8em 1em;
+  padding: 0.7rem;
   outline: none;
   border: none;
   color: #fff5e1;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.4s ease-in-out;
@@ -223,8 +271,8 @@ button:active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.6) 61%, rgba(0, 0, 0, 0.1) 90%);
+  height: 386px;
+  background: linear-gradient(179.35deg, rgba(38, 38, 38, 0) 0.85%, rgba(38, 38, 38, 0.9) 84%);
   pointer-events: none;
 }
 
@@ -275,7 +323,7 @@ button:active {
 }
 
 .about-main button {
-  width: 50%;
+  width: 40%;
   margin-bottom: 24em;
 }
 
@@ -285,14 +333,6 @@ button:active {
   border-bottom: 2px solid #fff;
   margin-bottom: 7em;
 }
-
-/* .skill-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-  margin: 2em 0;
-} */
 
 .skill-group {
   position: relative;
@@ -353,6 +393,8 @@ menu {
   padding: 4em 5vw 1em 5vw;
   flex-direction: column;
   gap: 2em;
+  max-width: 1500px;
+  margin: auto;
 }
 
 .contact h3 {
@@ -428,7 +470,7 @@ footer {
   }
 
   .work-image {
-    width: 70%;
+    width: 100%;
     margin: auto;
   }
 
@@ -438,10 +480,6 @@ footer {
 
   .work-text .categories {
     max-width: 70%;
-  }
-
-  .work-text button {
-    width: 25%;
   }
 
   .container-contact {
@@ -462,10 +500,11 @@ footer {
 
   .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 2em;
-    margin-right: 0.6em;
-    padding: 10vw 8vw;
+    margin: 0;
+    padding: 0;
   }
 
   .skills li {
@@ -473,7 +512,7 @@ footer {
     font-size: 1.3rem;
   }
 
-  nav .nav-links li {
+  .nav-links li {
     display: inline;
   }
 
@@ -482,7 +521,6 @@ footer {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     line-height: 20px;
-    letter-spacing: 0%;
     font-weight: 600;
     text-decoration: none;
     padding: 0.5em;
@@ -493,7 +531,7 @@ footer {
   }
 
   .work-image {
-    width: 70%;
+    width: 100%;
     margin: auto;
   }
 
@@ -501,15 +539,73 @@ footer {
     max-width: 70%;
   }
 
-  .work-text button {
-    width: 25%;
-  }
-
   .work-frame {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin: 2em 0;
+  }
+
+  .card {
+    min-height: 448px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .about-main button {
+    width: 30%;
+    margin-bottom: 5em;
+  }
+
+  .card::before {
+    transition: opacity 0.3s ease-in-out;
+    height: 100%;
+  }
+
+  .card button {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15%;
+    width: 100%;
+    padding: 0.75em 2em;
+    z-index: 3;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .contact form button {
+    margin-inline-start: 0%;
+    padding: 1em;
+    width: 70%;
+  }
+
+  .card:hover button {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 100%;
+    height: 15%;
+    padding: 0.75em 2em;
+    z-index: 3;
+    transform: translateX(-50%);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .card:hover::before {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .card:hover .card-title,
+  .card:hover p,
+  .card:hover .categories {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
   }
 
   /* About */
@@ -522,7 +618,7 @@ footer {
     background-image: url('./media-files/Frame.svg');
     background-repeat: no-repeat;
     background-size: 42% 30%;
-    background-position: 102% 15%;
+    background-position: 110% 15%;
   }
 
   .about-main {
@@ -531,11 +627,6 @@ footer {
 
   .about-main .primary-text {
     padding-top: 1em;
-  }
-
-  .about-main button {
-    width: 25%;
-    margin-bottom: 5em;
   }
 
   .line {
@@ -605,12 +696,6 @@ footer {
     text-align: left;
   }
 
-  .contact form button {
-    margin-inline-start: 0%;
-    padding: 0.8em 0;
-    width: 30%;
-  }
-
   .container-contact {
     padding-top: 10%;
     margin: 0 auto;
@@ -624,21 +709,16 @@ footer {
 /* TABLET LANDSCAPE / LAPTOP */
 
 @media (min-width: 1024px) {
-  .nav-hero {
-    background-color: #1c1a19;
-    min-width: 375px;
-    width: 100%;
-    height: auto;
-    min-height: 60vh;
+  .headline-wrapper {
+    background-image: url('./media-files/Illustration-header.svg');
+    background-position: 135% 0%;
+    background-size: 60% 95%;
   }
 
   .headline-main {
     display: flex;
     gap: 4em;
     padding: 30vh 10% 0 2%;
-    background-image: url('./media-files/Illustration-header.svg');
-    background-position: 135% 0%;
-    background-size: 60% 95%;
   }
 
   header a {
@@ -743,12 +823,6 @@ footer {
     font-size: 15px;
   }
 
-  button {
-    width: 25%;
-    padding: 0.9em 0.3em;
-    font-size: 0.8em;
-  }
-
   .work-frame {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -758,6 +832,12 @@ footer {
 
   .liner {
     display: none;
+  }
+
+  .contact form button {
+    margin-inline-start: 0%;
+    padding: 1em;
+    width: 60%;
   }
 }
 
@@ -779,41 +859,26 @@ footer {
   .detail .categories {
     padding-bottom: 0.8em;
   }
+
+  .headline-text {
+    max-width: 39.3vw;
+  }
 }
 
-@media (min-width: 1800px) {
-  .container {
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    padding-left: 2vw;
-  }
-
+@media (min-width: 1570px) {
   .headline-main {
     max-width: 1500px;
     padding: 30vh 10% 7% 5%;
+    margin: auto;
   }
 
-  .headline-main .headline-text {
-    padding-left: 1vw;
-  }
-
-  .headline-text .description {
-    max-width: 20vw;
-  }
-
-  .work-main {
-    max-width: 1500px;
-  }
-
-  .container-about {
+  .work-wrapper {
     max-width: 1500px;
     margin: auto;
   }
 
-  .container-contact {
+  .about-main {
     max-width: 1500px;
+    margin: auto;
   }
 }
