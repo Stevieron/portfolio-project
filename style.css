@@ -78,7 +78,7 @@ ul li {
 }
 
 .nav-container {
-  max-width: 1500px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 1em 2.5em;
   display: flex;
@@ -416,7 +416,7 @@ menu {
   padding: 4em 5vw 1em 5vw;
   flex-direction: column;
   gap: 2em;
-  max-width: 1500px;
+  max-width: 1800px;
   margin: auto;
 }
 
@@ -514,7 +514,7 @@ footer {
   }
 
   .container-contact {
-    max-width: 1500px;
+    max-width: 1800px;
     padding-top: 10%;
     margin: 0 auto;
   }
@@ -770,9 +770,10 @@ footer {
   }
 
   .headline-main {
+    height: 118vh;
     display: flex;
     gap: 4em;
-    padding: 25vh 10% 0 2%;
+    padding: 45vh 10% 0 2%;
   }
 
   header a {
@@ -799,7 +800,7 @@ footer {
   }
 
   .headline-main .description {
-    max-width: 45vw;
+    max-width: 600px;
   }
 
   .headline-text {
@@ -939,24 +940,29 @@ footer {
   }
 
   .headline-text {
-    max-width: 45vw;
+    max-width: 35vw;
   }
 }
 
-@media (min-width: 1570px) {
+@media (min-width: 1820px) {
+  .nav-container {
+    max-width: 2000px;
+    padding: 1em 0;
+  }
+
   .headline-main {
-    max-width: 1500px;
-    padding: 20vh 10% 0 2%;
+    max-width: 1800px;
+    padding: 45vh 10% 0 2%;
     margin: auto;
   }
 
   .work-wrapper {
-    max-width: 1500px;
+    max-width: 1900px;
     margin: auto;
   }
 
   .about-main {
-    max-width: 1500px;
+    max-width: 1900px;
     margin: auto;
   }
 }
