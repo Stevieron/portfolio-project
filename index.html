@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Crete Round' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Stephen Okon - Portfolio</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <section class="container">
@@ -16,8 +17,11 @@
                         <img class="logo" src="./media-files/Logo.png" alt="My Logo">
                     </a>
                     <nav>
-                        <img class="menu" src="./media-files/Enabled.png" alt="Menu">
-                        <ul class="nav-links">
+                        <button class="hamburger" aria-label="Toggle menu">
+                            <img src="./media-files/Enabled.png" alt="Menu Icon" class="icon-menu" />
+                            <img src="/media-files/Enabled.svg" alt="Close icon" class="icon-close" />
+                        </button>
+                        <ul class="nav-links" >
                             <li><a href="#">Portfolio</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact</a></li>
