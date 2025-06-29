@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Typography */
 p {
   font-size: 1rem;
@@ -202,6 +206,7 @@ ul li {
 }
 
 .headline-main {
+  position: relative;
   min-height: 590px;
   height: auto;
   padding: 25vh 10% 7% 6%;
@@ -269,6 +274,112 @@ hr {
   background-color: #212121;
 }
 
+/* Project Pop-up */
+
+.project-modal {
+  display: none;
+  position: absolute;
+  top: 13%;
+  left: 6%;
+  padding: 1em;
+  min-width: 320px;
+  width: 87%;
+  height: auto;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  transition: 0.5s ease;
+  z-index: 1001;
+}
+
+.blur {
+  filter: blur(6px);
+  transition: filter 0.3s ease;
+}
+
+.project-modal.view-project {
+  display: block;
+}
+
+.detail-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sub.desktop {
+  display: none;
+}
+
+.detail-title img {
+  cursor: pointer;
+}
+
+.categories.project {
+  max-width: 90%;
+  margin-bottom: 1.5em;
+}
+
+.categories.project li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 0.7em 0;
+}
+
+.sub {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #172b4d;
+  padding-bottom: 1em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.project-img {
+  flex: 40%;
+}
+
+.text-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 60%;
+}
+
+.project-info {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: rgba(52, 69, 99, 1);
+  margin-bottom: 2em;
+  line-height: 24px;
+}
+
+.project-info.desktop {
+  display: none;
+}
+
+.cta-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding-top: 0.5em;
+}
+
+.btn-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  height: 3em;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .work-details {
   display: flex;
   flex-direction: column;
@@ -283,12 +394,6 @@ hr {
 
 .detail .work-image {
   margin-bottom: 1.8em;
-}
-
-.sub {
-  font-size: 1.8em;
-  padding-bottom: 1em;
-  color: #091e42;
 }
 
 .work-text {
@@ -981,6 +1086,62 @@ footer {
     font-size: 15px;
   }
 
+  /* Project Pop-Up */
+
+  .project-modal {
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    width: 85%;
+    top: 13%;
+    left: 9%;
+  }
+
+  .sub.title {
+    display: none;
+  }
+
+  .sub.desktop {
+    display: block;
+    padding-bottom: 0;
+    font-size: 2rem;
+    line-height: 44px;
+    font-family: "Crete Round", sans-serif;
+  }
+
+  .info {
+    flex-direction: row;
+  }
+
+  .project-img {
+    flex: 2;
+  }
+
+  .project-info {
+    display: none;
+  }
+
+  .project-info.desktop {
+    display: block;
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0%;
+  }
+
+  .text-cta {
+    max-width: 45%;
+  }
+
+  .cta-detail {
+    margin-bottom: 0;
+    justify-content: flex-start;
+    gap: 3em;
+  }
+
+  .categories.project {
+    padding-bottom: 1.2em;
+  }
+
   .about-main .description {
     width: 44vw;
   }
@@ -1005,6 +1166,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 2em 0;
+  }
+
+  .project-info.desktop {
+    margin-bottom: 2em;
   }
 }
 
@@ -1039,6 +1204,12 @@ footer {
   }
 }
 
+@media (min-width: 1720px) {
+  .project-modal {
+    left: 15%;
+  }
+}
+
 @media (min-width: 1820px) {
   .nav-container {
     max-width: 2000px;
@@ -1059,5 +1230,9 @@ footer {
   .about-main {
     max-width: 1900px;
     margin: auto;
+  }
+
+  .project-modal {
+    left: 17%;
   }
 }
