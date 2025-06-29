@@ -1115,6 +1115,9 @@ footer {
 
   .project-img {
     flex: 2;
+    max-height: 580px;
+    height: auto;
+    width: 40%;
   }
 
   .project-info {
