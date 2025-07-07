@@ -6,21 +6,25 @@
     <link href='https://fonts.googleapis.com/css?family=Crete Round' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Stephen Okon - Portfolio</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <section class="container">
+    <section id="home" class="container">
         <section class="nav-hero">
             <header class="nav-header">
                 <div class="nav-container">
-                    <a href="index.html">
+                    <a href="#home">
                         <img class="logo" src="./media-files/Logo.png" alt="My Logo">
                     </a>
                     <nav>
-                        <img class="menu" src="./media-files/Enabled.png" alt="Menu">
-                        <ul class="nav-links">
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                        <button class="hamburger" aria-label="Toggle menu">
+                            <img src="./media-files/Enabled.png" alt="Menu Icon" class="icon-menu" />
+                            <img src="/media-files/Enabled.svg" alt="Close icon" class="icon-close" />
+                        </button>
+                        <ul class="nav-links" >
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
                             <li><a href="#"><img src="/media-files/Icon - Mail.svg" alt=""></a></li>
                         </ul>
                     </nav>
@@ -28,7 +32,7 @@
             </header>
         </section>
             <!-- Hero section -->
-            <article class="headline-wrapper">
+            <article id="hero" class="headline-wrapper">
                 <article class="headline-main">
                     <article class="headline-text">
                         <h1 class="title primary-text">
@@ -50,7 +54,7 @@
 
 <!-- Work Section -->
     </section>
-        <section class="work-wrapper">
+        <section id="portfolio" class="work-wrapper">
             <article class="work-main">
                 <article class="work-heading">
                     <h2 class="title work-title">My Recent Works</h2>
@@ -137,7 +141,7 @@
             </article>
         </section>
     <!-- About Section -->
-    <section class="container-about">
+    <section id="about" class="container-about">
         <section class="about-main">
             <article class="about-text">
                 <h1 class="title primary-text">About Me</h1>
@@ -185,7 +189,7 @@
         </section>
     </section>
     <!-- Contact Section -->
-    <section class="container-contact">
+    <section id="contact" class="container-contact">
           <article class="contact">
               <h3>
                 I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h3>
