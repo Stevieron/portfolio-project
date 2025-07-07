@@ -81,7 +81,7 @@ ul li {
   position: relative;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 0.3em 2.5em;
+  padding: 0.3em 2.5em 0.3em 4.5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,11 +98,11 @@ ul li {
 
 .nav-links.open {
   position: fixed;
-  top: 10%;
+  top: 0;
   right: 0;
   min-width: 375px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 4em 3em 0 2em;
   background-color: #3c3a39;
   opacity: 1;
@@ -112,6 +112,7 @@ ul li {
   justify-content: flex-start;
   list-style: none;
   gap: 2em;
+  z-index: 2000;
 }
 
 .nav-links li {
@@ -167,6 +168,8 @@ ul li {
 .icon-close {
   display: none;
   transition: opacity 0.5s ease;
+  z-index: 3000;
+  position: fixed;
 }
 
 .hamburger {
@@ -599,6 +602,10 @@ footer {
     font-size: 1em;
   }
 
+  .nav-container {
+    padding-left: 5%;
+  }
+
   .nav-links {
     display: flex;
     align-items: center;
@@ -1000,6 +1007,10 @@ footer {
 }
 
 @media (min-width: 1137px) {
+  .nav-container {
+    padding-left: 3%;
+  }
+
   .work-frame {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1030,6 +1041,10 @@ footer {
 /* DESKTOP */
 
 @media (min-width: 1440px) {
+  .nav-container {
+    padding-left: 2%;
+  }
+
   .detail .categories {
     padding-bottom: 0.8em;
   }
@@ -1043,6 +1058,7 @@ footer {
   .nav-container {
     max-width: 2000px;
     padding: 1em 0;
+    padding-left: 5%;
   }
 
   .headline-main {
