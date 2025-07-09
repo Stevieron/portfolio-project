@@ -206,7 +206,6 @@ ul li {
 }
 
 .headline-main {
-  position: relative;
   min-height: 590px;
   height: auto;
   padding: 25vh 10% 7% 6%;
@@ -278,26 +277,46 @@ hr {
 
 .project-modal {
   display: none;
-  position: absolute;
-  top: 13%;
-  left: 6%;
-  padding: 1em;
-  min-width: 320px;
-  width: 87%;
-  height: auto;
+  position: fixed;
+  top: 1%;
+  left: 5%;
+  padding: 0 1.4em 1.4em 1.4em;
+  max-width: 1400px;
+  width: 88%;
+  height: 100%;
+  overflow-y: auto;
   margin: 0 auto;
   background: rgba(255, 255, 255, 1);
-  transition: 0.5s ease;
-  z-index: 1001;
+  z-index: 4000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-.blur {
+.card > * {
+  position: relative;
+  z-index: 2;
+}
+
+#pageContent.blurred {
   filter: blur(6px);
   transition: filter 0.3s ease;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .project-modal.view-project {
   display: block;
+}
+
+.categories.project li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 0.7em 0;
+}
+
+.project-modal .categories.project li {
+  padding: 0.7em 1em;
 }
 
 .detail-title {
@@ -312,17 +331,12 @@ hr {
 
 .detail-title img {
   cursor: pointer;
+  padding-top: 0.4em;
 }
 
 .categories.project {
-  max-width: 90%;
+  max-width: 60%;
   margin-bottom: 1.5em;
-}
-
-.categories.project li {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  padding: 0.7em 0;
 }
 
 .sub {
@@ -337,10 +351,13 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  align-items: center;
 }
 
 .project-img {
-  flex: 40%;
+  max-height: 400px;
+  height: 100%;
+  width: 100%;
 }
 
 .text-cta {
@@ -441,17 +458,22 @@ button:active {
 }
 
 .work-frame {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   margin: 2em 0;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   background-image: url('./media-files/Img\ Card.png');
   background-size: cover;
   background-position: center;
   color: #fff;
+  height: auto;
   max-width: 100%;
   margin-bottom: 2em;
   overflow: hidden;
@@ -463,14 +485,9 @@ button:active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 386px;
-  background: linear-gradient(179.35deg, rgba(38, 38, 38, 0) 0.85%, rgba(38, 38, 38, 0.9) 84%);
+  height: 470px;
+  background: linear-gradient(182.35deg, rgba(38, 38, 38, 0) 0.85%, rgba(38, 38, 38, 0.9) 84%);
   pointer-events: none;
-}
-
-.card > * {
-  position: relative;
-  z-index: 2;
 }
 
 .card button {
@@ -478,7 +495,7 @@ button:active {
 }
 
 .card .card-title {
-  padding: 22% 0 3% 5%;
+  padding: 35% 0 7% 5%;
   font-size: 2rem;
   line-height: 44px;
 }
@@ -688,6 +705,12 @@ footer {
     background-image: url('./media-files/Img\ Placeholder-3.svg');
   }
 
+  .card .card-title {
+    padding: 22% 0 7% 5%;
+    font-size: 2rem;
+    line-height: 44px;
+  }
+
   .container-contact {
     max-width: 1800px;
     padding-top: 10%;
@@ -787,7 +810,7 @@ footer {
   }
 
   .card {
-    min-height: 448px;
+    min-height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -831,6 +854,12 @@ footer {
     z-index: 3;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
+  }
+
+  .card .card-title {
+    padding: 11% 0 11% 5%;
+    font-size: 2rem;
+    line-height: 44px;
   }
 
   .contact form button {
@@ -1087,14 +1116,12 @@ footer {
   }
 
   /* Project Pop-Up */
-
   .project-modal {
-    max-width: 1300px;
     height: auto;
     margin: 0 auto;
-    width: 85%;
-    top: 13%;
-    left: 9%;
+    width: 80%;
+    top: 5%;
+    left: 10%;
   }
 
   .sub.title {
@@ -1111,13 +1138,14 @@ footer {
 
   .info {
     flex-direction: row;
+    align-items: stretch;
   }
 
   .project-img {
-    flex: 2;
-    max-height: 580px;
-    height: auto;
+    flex: 1 1 auto;
     width: 40%;
+    height: auto;
+    object-fit: cover;
   }
 
   .project-info {
@@ -1132,7 +1160,10 @@ footer {
   }
 
   .text-cta {
-    max-width: 45%;
+    flex: 1 1 auto;
+    min-width: 300px;
+    max-width: 50%;
+    justify-content: space-between;
   }
 
   .cta-detail {
@@ -1142,7 +1173,13 @@ footer {
   }
 
   .categories.project {
-    padding-bottom: 1.2em;
+    padding-bottom: 1em;
+    max-width: 30%;
+    gap: 0.6em;
+  }
+
+  .project-modal .categories.project li {
+    padding: 0.7em 1em;
   }
 
   .about-main .description {
