@@ -20,6 +20,13 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+const seeProjects = document
+  .getElementById("seeProjectBtn")
+  .addEventListener("click", function (e) {
+    const projectFrame = document.getElementById("projectFrame");
+    projectFrame.scrollIntoView({ behavior: "smooth" });
+  });
+
 // Main projects
 const projects = [
   {
